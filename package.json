@@ -8,9 +8,13 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue src ",
-    "build": "nodemon    --ignore  node_modules  build/build.js",
-    "dev": "nodemon    --ignore  node_modules build/build-dev.js",
-    "test_env": "nodemon    --ignore  node_modules build/build-test.js"
+    "build": "nodemon     build/build.js",
+    "dev": "nodemon    build/build-dev.js",
+    "test_env": "nodemon   build/build-test.js"
+  },
+  "nodemonConfig":{
+    "ignore":["node_modules"],
+    "ext": "js json vue html css scss styl jsx"
   },
   "dependencies": {
     "vue": "^2.5.2",
