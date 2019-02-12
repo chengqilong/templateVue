@@ -8,9 +8,9 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue src ",
-    "build": "node build/build.js",
-    "dev":"node build/build-dev.js",
-    "test_env":"node build/build-test.js"
+    "build": "nodemon    --ignore  node_modules  build/build.js",
+    "dev":"nodemon    --ignore  node_modules build/build-dev.js",
+    "test_env":"nodemon    --ignore  node_modules build/build-test.js"
   },
   "dependencies": {
     "vue": "^2.5.2",
@@ -71,8 +71,8 @@
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
-    "webpack-dev-server": "^2.9.1",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "nodemon": "^1.18.9"
   },
   "engines": {
     "node": ">= 6.0.0",
